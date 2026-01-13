@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exit Application Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#007BFF",
+              "background-light": "#F8F9FA",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="max-w-4xl mx-auto py-12 px-4 opacity-50 pointer-events-none select-none">
+<header class="flex justify-between items-center mb-8">
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Applying to NGO Coordinator Internship</h1>
+<button class="text-gray-400"><span class="material-icons">close</span></button>
+</header>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-700">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">NGO Coordinator</h2>
+<p class="text-gray-600 dark:text-gray-400">Hamari Pahchan NGO <span class="ml-2 text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded font-medium dark:bg-blue-900/20 dark:text-blue-400">Actively hiring</span></p>
+</div>
+<img alt="NGO Logo" class="w-12 h-12 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgCeq6FWFITBa3rOpogmeXkq277_Z5k8JkD8YTO4NoZO8ferc3Wiz7lRrKInJHZmKRC71JKp_e-RU3wM0i8tASfqJEvLPFpnXpNa98-uGUqf9aWQXIKK_cmeYs8lcbG7ipl_P8CgilhMz6PFaVouREPzUgYq_7U8-2tB3gbl8mQNJj9cpAIdK1uw2f-1b-5siSJLoNQi3RjO_eH3N-CC_j2ztdTCtmIy4eJzdIgA30CixPAJ5wCR5QTVSLOLZN4vlqSEmrVGnJYic"/>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
+<div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+<span class="material-icons text-sm">payments</span>
+<span>₹ 3,000 - 5,000 /month</span>
+</div>
+<div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+<span class="material-icons text-sm">location_on</span>
+<span>Delhi</span>
+</div>
+<div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+<span class="material-icons text-sm">schedule</span>
+<span>3 Months</span>
+</div>
+<div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+<span class="material-icons text-sm">history</span>
+<span>6 days ago</span>
+</div>
+</div>
+<section class="mb-8">
+<h3 class="font-semibold text-gray-900 dark:text-white mb-3">About the internship</h3>
+<div class="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-400">
+<p><strong>Role Overview:</strong></p>
+<ul class="list-disc pl-5">
+<li>Set up and manage fundraisers, organize awareness campaigns, and conduct outreach.</li>
+<li>Develop strategies and create content for digital platforms.</li>
+<li>Gain hands-on experience in fundraising and digital campaigns.</li>
+</ul>
+</div>
+</section>
+<section class="border-t border-gray-100 dark:border-gray-700 pt-8 mt-8">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Apply now</h3>
+<div class="space-y-6">
+<div>
+<p class="font-medium text-gray-900 dark:text-white mb-2">Confirm your availability</p>
+<div class="space-y-3">
+<label class="flex items-center gap-3">
+<input checked="" class="text-primary focus:ring-primary border-gray-300" type="radio"/>
+<span class="text-sm text-gray-700 dark:text-gray-300">Yes, I am available for 3 months</span>
+</label>
+<label class="flex items-center gap-3">
+<input class="text-primary focus:ring-primary border-gray-300" type="radio"/>
+<span class="text-sm text-gray-700 dark:text-gray-300">No, I am currently not available</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4">
+<div class="bg-white dark:bg-gray-800 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+<div class="p-6 pb-0 flex justify-between items-start">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                    Exit application?
+                </h3>
+</div>
+<div class="p-6">
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                    Changes you have made will not be saved. Are you sure you want to leave?
+                </p>
+<div class="flex items-center gap-3 bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-lg">
+<input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600" id="bookmark" type="checkbox"/>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1" for="bookmark">
+<span class="material-icons text-primary text-lg">bookmark</span>
+                        Add this to my bookmarks
+                    </label>
+</div>
+</div>
+<div class="px-6 py-4 bg-gray-50 dark:bg-gray-800/50 flex justify-end gap-3 border-t border-gray-100 dark:border-gray-700">
+<button class="px-5 py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors border border-gray-200 dark:border-gray-600">
+                    Cancel
+                </button>
+<button class="px-8 py-2.5 text-sm font-semibold text-white bg-primary hover:bg-blue-600 rounded-lg shadow-sm shadow-blue-200 dark:shadow-none transition-all">
+                    Exit
+                </button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-4 right-4">
+<button class="p-3 bg-white dark:bg-gray-700 shadow-lg rounded-full border border-gray-200 dark:border-gray-600 flex items-center justify-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-gray-800 dark:text-yellow-400">dark_mode</span>
+</button>
+</div>
+
+</body></html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internship Application | MSASCE-LMS</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#135bec",
+                        "app-bg": "#f8fafc",
+                        "surface": "#ffffff",
+                        "text-main": "#1e293b",
+                        "text-muted": "#475569"
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-app-bg text-text-main font-sans; }
+            h1, h2, h3, h4 { @apply font-display; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 px-6 py-3 shadow-sm">
+<div class="max-w-5xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined block">school</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">MSASCE-LMS</h1>
+</div>
+<div class="flex items-center gap-6">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold text-slate-900">John Doe</p>
+<p class="text-xs text-slate-500 font-medium">Student ID: 202401</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center text-primary border-2 border-white shadow-sm ring-1 ring-slate-100">
+<span class="material-symbols-outlined">person</span>
+</div>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto py-8 px-4 sm:px-6">
+<div class="mb-6 flex items-center justify-between">
+<h2 class="text-lg font-medium text-text-muted">Applying to <span class="text-slate-900 font-bold">NGO Coordinator Internship</span></h2>
+<button class="text-slate-400 hover:text-slate-600 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<section class="bg-surface rounded-xl border border-slate-200 p-6 mb-6 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div>
+<h1 class="text-2xl font-bold text-slate-900 mb-1">NGO Coordinator</h1>
+<div class="flex items-center gap-3 mb-4">
+<span class="text-primary font-semibold text-sm">Hamari Pahchan NGO</span>
+<span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded-full font-bold flex items-center gap-1 border border-emerald-100">
+<span class="material-symbols-outlined text-xs">trending_up</span> Actively hiring
+                        </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-y-5 gap-x-8 mt-6">
+<div class="flex items-center gap-3">
+<div class="bg-slate-50 p-2 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 text-xl">payments</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Stipend</p>
+<p class="text-sm font-bold text-slate-800">₹ 3,000 - 5k /mo</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-slate-50 p-2 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 text-xl">location_on</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Location</p>
+<p class="text-sm font-bold text-slate-800">Delhi</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-slate-50 p-2 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 text-xl">schedule</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Duration</p>
+<p class="text-sm font-bold text-slate-800">3 Months</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap gap-3 items-center">
+<div class="flex items-center gap-1.5 text-xs font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">
+<span class="material-symbols-outlined text-[16px]">history</span>
+                    Posted 6 days ago
+                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+                    500 vacancies
+                </div>
+</div>
+</section>
+<section class="bg-surface rounded-xl border border-slate-200 p-8 mb-6 shadow-sm space-y-8">
+<div>
+<h3 class="text-lg font-bold mb-4 flex items-center gap-3 text-slate-900">
+<span class="w-1 h-6 bg-primary rounded-full"></span>
+                    About the Internship
+                </h3>
+<p class="text-text-muted text-sm leading-relaxed">
+                    Hamari Pahchan is a non-governmental organization that focuses on various social issues including education, women empowerment, and health. We are looking for passionate NGO Coordinators to help manage our ground operations and community outreach programs.
+                </p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div>
+<h4 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">Role Overview</h4>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">check_circle</span>
+<span>Organizing community awareness camps and donation drives.</span>
+</li>
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">check_circle</span>
+<span>Managing a team of volunteers for specific projects.</span>
+</li>
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">check_circle</span>
+<span>Documenting impact stories and project reports.</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">Requirements</h4>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">verified</span>
+<span>Strong communication and interpersonal skills.</span>
+</li>
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">verified</span>
+<span>Availability for on-field visits in Delhi.</span>
+</li>
+<li class="flex gap-3 text-sm text-text-muted">
+<span class="text-primary mt-1 material-symbols-outlined text-[14px] font-bold">verified</span>
+<span>Commitment to community development.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-100">
+<h4 class="font-bold text-slate-900 mb-2">About Company</h4>
+<p class="text-sm text-text-muted italic leading-relaxed">
+                    Hamari Pahchan NGO provides a platform to every individual who has a dream to serve the society. Our mission is to bridge the gap between the privileged and the underprivileged sections.
+                </p>
+<a class="mt-4 inline-flex items-center text-primary font-bold text-sm hover:text-blue-700 transition-colors" href="#">
+                    View full job description - here 
+                    <span class="material-symbols-outlined text-sm ml-1.5">open_in_new</span>
+</a>
+</div>
+</section>
+<section class="bg-surface rounded-xl border border-slate-200 p-8 mb-24 shadow-sm">
+<h3 class="text-xl font-bold mb-6 text-slate-900">Apply Now</h3>
+<div class="mb-8 bg-blue-50/40 p-5 rounded-xl border border-blue-100 flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-white p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-slate-900">Your resume - updated recently</h4>
+<p class="text-xs text-slate-500 mt-0.5">Your primary resume will be submitted to the employer.</p>
+</div>
+</div>
+<button class="text-primary text-sm font-bold hover:bg-white px-4 py-2 rounded-lg border border-transparent hover:border-blue-200 transition-all">
+                    Edit resume
+                </button>
+</div>
+<form class="space-y-8">
+<div class="space-y-4">
+<label class="block font-bold text-slate-900">Confirm your availability</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-3 rounded-lg border border-slate-100 hover:border-primary/30 hover:bg-slate-50 cursor-pointer transition-all">
+<input checked="" class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="availability" type="radio"/>
+<span class="text-sm font-medium text-slate-700">Yes, I am available to join immediately</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg border border-slate-100 hover:border-primary/30 hover:bg-slate-50 cursor-pointer transition-all">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="availability" type="radio"/>
+<span class="text-sm font-medium text-slate-700">No, I am currently on notice period</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg border border-slate-100 hover:border-primary/30 hover:bg-slate-50 cursor-pointer transition-all">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="availability" type="radio"/>
+<span class="text-sm font-medium text-slate-700">Other</span>
+</label>
+</div>
+</div>
+<div class="space-y-4 pt-8 border-t border-slate-100">
+<h4 class="font-bold text-slate-900">Additional question(s)</h4>
+<div class="space-y-4">
+<p class="text-sm font-medium text-slate-700">Do you have a working laptop and internet?</p>
+<div class="flex gap-6">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="laptop" type="radio"/>
+<span class="text-sm font-medium text-slate-600 group-hover:text-slate-900">Yes</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="laptop" type="radio"/>
+<span class="text-sm font-medium text-slate-600 group-hover:text-slate-900">No</span>
+</label>
+</div>
+</div>
+</div>
+<div class="space-y-4 pt-8 border-t border-slate-100">
+<label class="block font-bold text-slate-900">Custom resume <span class="text-slate-400 font-normal ml-1">(Optional)</span></label>
+<p class="text-xs text-slate-500">Employer can download and view this specific resume for this application</p>
+<div class="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-2 border-dashed border-slate-200 w-full sm:w-fit">
+<div class="bg-red-50 p-2 rounded-lg">
+<span class="material-symbols-outlined text-red-500">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-[120px]">
+<p class="text-sm font-bold text-slate-700">resume_1758.pdf</p>
+<p class="text-[10px] text-slate-400 uppercase font-bold">PDF • 1.2 MB</p>
+</div>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</form>
+</section>
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-slate-200 p-4 z-40">
+<div class="max-w-4xl mx-auto flex justify-between items-center">
+<p class="text-xs text-slate-500 font-medium hidden sm:block">By submitting, you agree to our terms of service.</p>
+<button class="bg-primary hover:bg-blue-700 text-white font-bold py-3.5 px-12 rounded-xl shadow-lg shadow-primary/20 transition-all hover:translate-y-[-1px] active:translate-y-[1px]">
+                    Submit Application
+                </button>
+</div>
+</div>
+</main>
+
+</body></html>

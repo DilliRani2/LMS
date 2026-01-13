@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Final Profile Review - Placement LMS</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            display: ["Lexend"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Lexend', sans-serif; }
+    .material-symbols-outlined { font-size: 20px; }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-gray-100">
+
+<div class="relative flex min-h-screen flex-col">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 flex justify-between items-center border-b bg-white dark:bg-background-dark px-10 py-3">
+  <div class="flex items-center gap-4">
+    <div class="size-8 text-primary">
+      <svg viewBox="0 0 48 48" fill="currentColor">
+        <path d="M4 42.4s10-6.3 20  -1.2C35 47 44 42.2 44 42.2V7s-9 4.6-20-1.1C14 .8 4 7.2 4 7.2v35.2z"/>
+      </svg>
+    </div>
+    <h2 class="text-lg font-bold">MSAJCE LMS</h2>
+  </div>
+
+  <nav class="hidden md:flex gap-9">
+    <a href="#" class="hover:text-primary">Dashboard</a>
+    <a href="#" class="hover:text-primary">Jobs</a>
+    <a href="#" class="hover:text-primary">Trainings</a>
+    <a href="#" class="hover:text-primary">Profile</a>
+  </nav>
+
+  <div class="size-10 rounded-full bg-cover border" style="background-image:url('https://i.pravatar.cc/100')"></div>
+</header>
+
+<!-- MAIN -->
+<main class="flex-1 px-4 md:px-10 lg:px-40 py-8">
+<div class="max-w-[1000px] mx-auto space-y-6">
+
+<!-- Progress -->
+<div class="bg-white dark:bg-gray-900 border p-6 rounded-xl">
+  <div class="flex justify-between items-center">
+    <h1 class="text-2xl font-black">Final Profile Review Summary</h1>
+    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">100% Complete</span>
+  </div>
+  <div class="h-3 bg-gray-200 rounded-full mt-3">
+    <div class="h-full bg-primary rounded-full w-full"></div>
+  </div>
+  <p class="text-sm text-gray-500 mt-2">Ready for final submission.</p>
+</div>
+
+<!-- Personal Details -->
+<section class="bg-white dark:bg-gray-900 border rounded-xl overflow-hidden">
+  <div class="flex justify-between items-center bg-gray-50 dark:bg-gray-800 px-6 py-4 border-b">
+    <h3 class="font-bold flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary">person</span> Personal & Academic Details
+    </h3>
+    <button class="text-primary flex gap-1 items-center">
+      <span class="material-symbols-outlined text-sm">edit</span> Edit
+    </button>
+  </div>
+
+  <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div><p class="text-xs text-gray-500">Name</p><p>John Doe</p></div>
+    <div><p class="text-xs text-gray-500">Email</p><p>john@college.edu</p></div>
+    <div><p class="text-xs text-gray-500">Phone</p><p>+91 98765 43210</p></div>
+    <div><p class="text-xs text-gray-500">Degree</p><p>B.Tech CSE</p></div>
+    <div><p class="text-xs text-gray-500">Department</p><p>IT</p></div>
+    <div><p class="text-xs text-gray-500">Batch</p><p>2020–2024</p></div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="bg-white dark:bg-gray-900 border rounded-xl overflow-hidden">
+  <div class="bg-gray-50 dark:bg-gray-800 px-6 py-4 border-b">
+    <h3 class="font-bold flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary">psychology</span> Skills
+    </h3>
+  </div>
+  <div class="p-6 flex flex-wrap gap-2">
+    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Python</span>
+    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Java</span>
+    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">React</span>
+    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">SQL</span>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="bg-white dark:bg-gray-900 border rounded-xl">
+  <div class="bg-gray-50 dark:bg-gray-800 px-6 py-4 border-b">
+    <h3 class="font-bold flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary">work</span> Experience
+    </h3>
+  </div>
+  <div class="p-6 space-y-3">
+    <div class="border-l-2 pl-4 border-primary">Full Stack Intern – TechCorp (3 Months)</div>
+    <div class="border-l-2 pl-4 border-primary">Research Intern – College Lab (2 Months)</div>
+  </div>
+</section>
+
+<!-- Final Submit -->
+<div class="bg-primary/5 border-2 border-primary/20 rounded-xl p-8 text-center">
+  <div class="flex gap-3 items-start text-left max-w-lg mx-auto">
+    <input type="checkbox" class="mt-1">
+    <p class="text-sm text-gray-600">I confirm that all information is correct.</p>
+  </div>
+  <button class="mt-6 bg-primary text-white px-12 py-4 rounded-lg font-bold flex items-center gap-2 mx-auto">
+    Submit Profile <span class="material-symbols-outlined">send</span>
+  </button>
+</div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t py-6 text-center text-xs text-gray-500">
+  © 2024 College Placement Management System
+</footer>
+
+</div>
+</body>
+</html>
