@@ -1,125 +1,126 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Submit & Recommended</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#2563eb",
-                        "background-light": "#f8fafc",
-                        "background-dark": "#0f172a",
-                    },
-                    fontFamily: {
-                        display: ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                    },
-                },
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Submit & Recommended</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f172a",
             },
-        };
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark transition-colors duration-200 min-h-screen">
-<header class="w-full h-16 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900 flex items-center justify-between px-6">
-<div class="flex items-center space-x-4">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-<span class="material-icons-outlined">school</span>
-</div>
-<span class="text-xl font-bold text-gray-800 dark:text-white">MSAJCE LMS</span>
-</div>
-<div class="flex items-center space-x-6 text-gray-500 dark:text-gray-400">
-<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">menu</span>
-<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
-<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">person</span>
-<span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">account_circle</span>
-</div>
-</header>
-<main class="p-8 opacity-40 select-none">
-<h1 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Recent Applications</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-<div class="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
-<div class="h-4 w-1/2 bg-gray-100 dark:bg-gray-700 rounded"></div>
-</div>
-<div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-<div class="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
-<div class="h-4 w-1/2 bg-gray-100 dark:bg-gray-700 rounded"></div>
-</div>
-</div>
-</main>
-<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 flex flex-col items-center justify-start pt-12 px-4">
-<div class="mb-8 animate-bounce">
-<div class="bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 px-6 py-3 rounded-full shadow-lg flex items-center space-x-3">
-<span class="material-icons-outlined text-xl">check_circle</span>
-<span class="font-medium text-sm">Applied successfully</span>
-</div>
-</div>
-<div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-<div class="flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-700">
-<h2 class="text-lg font-semibold text-gray-800 dark:text-white">Recommended Internships for you</h2>
-<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
-<span class="material-icons-outlined">close</span>
-</button>
-</div>
-<div class="p-6">
-<div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-xl p-5 border border-blue-100 dark:border-blue-900/30">
-<div class="flex justify-between items-start mb-4">
-<div class="space-y-1">
-<h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Team Coordinator - Paid Web Developer</h3>
-<p class="text-primary font-medium text-sm">TechCorp Innovations</p>
-</div>
-<div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-lg shadow-sm flex items-center justify-center p-2">
-<img alt="Company Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Om-QH0HnNnADKzjy3oWbxwRCto18pnWKqJTtuk0pWC5P9AhkAZwkIcZYpaAKymAMh97crrxvshP_5J538SiOcd_T-8cbudylb4KONU6ZAj01LUCDO9epaqbam1aSkx0VX02RQ7FgAs2kHxy6LA1sTCzmjwbJOaOSNYDZwmmEgFPY6oOXz17peIB_fMMwsI5yeaf1c9W9XdyMejLWY97EvMMEE3QCNgfZCXEN2ky9YrFSCveKZn8P_QQkEivpx-xHpz9BlOqsP64"/>
-</div>
-</div>
-<div class="space-y-3 mb-6">
-<div class="flex items-center text-gray-600 dark:text-gray-300">
-<span class="material-icons-outlined text-lg mr-3 text-gray-400">payments</span>
-<span class="text-sm">₹ 6000 / month</span>
-</div>
-<div class="flex items-center text-gray-600 dark:text-gray-300">
-<span class="material-icons-outlined text-lg mr-3 text-gray-400">home_work</span>
-<span class="text-sm">Work from home</span>
-</div>
-<div class="flex items-center text-gray-600 dark:text-gray-300">
-<span class="material-icons-outlined text-lg mr-3 text-gray-400">calendar_today</span>
-<span class="text-sm">3 Months Duration</span>
-</div>
-</div>
-<a class="inline-flex items-center text-primary hover:underline text-sm font-medium" href="#">
-                        View full job description - here
-                        <span class="material-icons-outlined text-xs ml-1">open_in_new</span>
-</a>
-</div>
-</div>
-<div class="px-6 py-5 bg-gray-50 dark:bg-slate-800/50 flex justify-end items-center space-x-3">
-<button class="px-6 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 font-medium text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
-                    Skip
-                </button>
-<button class="px-6 py-2.5 rounded-lg bg-primary text-white font-medium text-sm hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20">
-                    Apply Now
-                </button>
-</div>
-</div>
-</div>
-<div class="fixed bottom-6 right-6 z-50">
-<button class="w-12 h-12 rounded-full bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 shadow-lg flex items-center justify-center text-gray-600 dark:text-yellow-400 hover:scale-110 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons-outlined dark:hidden">dark_mode</span>
-<span class="material-icons-outlined hidden dark:block">light_mode</span>
-</button>
-</div>
-
-</body></html>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark transition-colors duration-200 min-h-screen">
+    <header class="w-full h-16 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900 flex items-center justify-between px-6">
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+          <span class="material-icons-outlined">school</span>
+        </div>
+        <span class="text-xl font-bold text-gray-800 dark:text-white">MSAJCE LMS</span>
+      </div>
+      <div class="flex items-center space-x-6 text-gray-500 dark:text-gray-400">
+        <span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">menu</span>
+        <span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+        <span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">person</span>
+        <span class="material-icons-outlined cursor-pointer hover:text-primary transition-colors">account_circle</span>
+      </div>
+    </header>
+    <main class="p-8 opacity-40 select-none">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Recent Applications</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div class="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+          <div class="h-4 w-1/2 bg-gray-100 dark:bg-gray-700 rounded"></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div class="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+          <div class="h-4 w-1/2 bg-gray-100 dark:bg-gray-700 rounded"></div>
+        </div>
+      </div>
+    </main>
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 flex flex-col items-center justify-start pt-12 px-4">
+      <div class="mb-8 animate-bounce">
+        <div class="bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 px-6 py-3 rounded-full shadow-lg flex items-center space-x-3">
+          <span class="material-icons-outlined text-xl">check_circle</span>
+          <span class="font-medium text-sm">Applied successfully</span>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div class="flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-700">
+          <h2 class="text-lg font-semibold text-gray-800 dark:text-white">Recommended Internships for you</h2>
+          <button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+            <span class="material-icons-outlined">close</span>
+          </button>
+        </div>
+        <div class="p-6">
+          <div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-xl p-5 border border-blue-100 dark:border-blue-900/30">
+            <div class="flex justify-between items-start mb-4">
+              <div class="space-y-1">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Team Coordinator - Paid Web Developer</h3>
+                <p class="text-primary font-medium text-sm">TechCorp Innovations</p>
+              </div>
+              <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-lg shadow-sm flex items-center justify-center p-2">
+                <img alt="Company Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Om-QH0HnNnADKzjy3oWbxwRCto18pnWKqJTtuk0pWC5P9AhkAZwkIcZYpaAKymAMh97crrxvshP_5J538SiOcd_T-8cbudylb4KONU6ZAj01LUCDO9epaqbam1aSkx0VX02RQ7FgAs2kHxy6LA1sTCzmjwbJOaOSNYDZwmmEgFPY6oOXz17peIB_fMMwsI5yeaf1c9W9XdyMejLWY97EvMMEE3QCNgfZCXEN2ky9YrFSCveKZn8P_QQkEivpx-xHpz9BlOqsP64" />
+              </div>
+            </div>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-gray-600 dark:text-gray-300">
+                <span class="material-icons-outlined text-lg mr-3 text-gray-400">payments</span>
+                <span class="text-sm">₹ 6000 / month</span>
+              </div>
+              <div class="flex items-center text-gray-600 dark:text-gray-300">
+                <span class="material-icons-outlined text-lg mr-3 text-gray-400">home_work</span>
+                <span class="text-sm">Work from home</span>
+              </div>
+              <div class="flex items-center text-gray-600 dark:text-gray-300">
+                <span class="material-icons-outlined text-lg mr-3 text-gray-400">calendar_today</span>
+                <span class="text-sm">3 Months Duration</span>
+              </div>
+            </div>
+            <a class="inline-flex items-center text-primary hover:underline text-sm font-medium" href="#">
+              View full job description - here
+              <span class="material-icons-outlined text-xs ml-1">open_in_new</span>
+            </a>
+          </div>
+        </div>
+        <div class="px-6 py-5 bg-gray-50 dark:bg-slate-800/50 flex justify-end items-center space-x-3">
+          <button class="px-6 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 font-medium text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
+            Skip
+          </button>
+          <button class="px-6 py-2.5 rounded-lg bg-primary text-white font-medium text-sm hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20">
+            Apply Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="fixed bottom-6 right-6 z-50">
+      <button class="w-12 h-12 rounded-full bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 shadow-lg flex items-center justify-center text-gray-600 dark:text-yellow-400 hover:scale-110 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-icons-outlined dark:hidden">dark_mode</span>
+        <span class="material-icons-outlined hidden dark:block">light_mode</span>
+      </button>
+    </div>
+  </body>
+</html>
