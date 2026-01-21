@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Dashboard</title>
+  <title>Student Dashboard</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
@@ -15,7 +15,7 @@
       theme: {
         extend: {
           colors: {
-            primary: "#1E40AF",
+            primary: "#0E21A0",
             "background-light": "#F8FAFC",
             "background-dark": "#0F172A",
           },
@@ -49,13 +49,13 @@
     <div class="flex justify-between h-16 items-center">
 
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
-          <span class="material-icons-round text-sm">school</span>
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgYYJ0QgJM6QEHeK6Mhb5fpOYr-SXYpTvIFiGyXzOhCHART2fU10iSGZOPcquEpP-ZVMZhHg4dFUnWfS4YaxIBUFFJJ5QXwyvio46gX--5sLY8vB9Of3sTRrGxeSDtdjseAq2kCdHSV1G_6fYawt7cmByi2G4LmP-hi4bjkx-Um5fDnFCXmnoNYGCQVVMv_Mw6wRtRbp54tez1LT9D9ttWdqCsiOvNyYqIL27VwDwsElO1kCX4UzEwgyBiyQDc5kVg2cTnIjjqsi8" alt="MSAJCE Logo" style="width: 100%; height: 100%; object-fit: contain;">
         </div>
-        <span class="text-xl font-bold tracking-tight text-primary">MSAJCE LMS</span>
+        <span class="text-xl font-bold tracking-tight text-primary" style="color: #0E21A0;">MSAJCE LMS</span>
       </div>
 
-      <div class="flex items-center space-x-6">
+      <div class="flex items-center space-x-6 ml-auto">
 
         <div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 dark:bg-orange-950/30 text-orange-600 rounded-full border border-orange-100 dark:border-orange-900/50">
           <span class="material-icons-round text-lg">local_fire_department</span>
@@ -72,7 +72,7 @@
           <span class="material-icons-round">dark_mode</span>
         </button>
 
-        <div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
+        <a href="Stu-Profile.html"><div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
           <div class="text-right hidden sm:block">
             <p class="text-sm font-semibold">Alex Johnson</p>
             <p class="text-xs text-slate-500 dark:text-slate-400">Final Year, CS</p>
@@ -261,10 +261,12 @@
     <p class="text-blue-100 mb-8 text-lg">
       Your profile is 85% complete. Adding your latest projects increases visibility to top recruiters by 40%.
     </p>
-    <button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center gap-2 mx-auto shadow-lg shadow-black/10">
-      Complete your profile
-      <span class="material-icons-round">arrow_forward</span>
-    </button>
+    <a href="CreateProfile1.html">
+      <button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center gap-2 mx-auto shadow-lg shadow-black/10">
+        Complete your profile
+        <span class="material-icons-round">arrow_forward</span>
+      </button>
+    </a>
   </div>
 </div>
 
