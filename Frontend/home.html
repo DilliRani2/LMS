@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSAJCE LMS - Training & Placement Portal</title>
+    <style>
+        /* Home Page Styles - MSAJCE Placement Cell Design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .home-container {
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+
+        /* Header Navigation */
+        .header {
+            background: #0E21A0;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0E21A0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .msajce-logo-header {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text-section h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .logo-text-section h3 {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: white !important;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        .nav-item:hover {
+            color: #0E21A0 !important;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0E21A0 0%, #4D2FB2 50%, #B153D7 100%);
+            z-index: 0;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><polygon fill="rgba(255,255,255,0.05)" points="0,0 200,100 400,0 600,100 800,0 1000,100 1200,0 1200,600 0,600"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-left {
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .action-btn {
+            background: rgba(255, 255, 255, 0.95);
+            color: #0E21A0;
+            border: none;
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: white;
+            color: #4D2FB2;
+        }
+
+        .btn-icon {
+            font-size: 1.5rem;
+        }
+
+        .btn-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Why MSAJCE Section */
+        .why-section {
+            background: #0E21A0;
+            color: white;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-main-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-block {
+            background: rgba(240, 236, 236, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-block:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-block p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .know-more-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .know-more-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Content Section - Three Columns */
+        .content-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .info-card h3 {
+            color: #1a237e;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .card-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .card-link:hover {
+            color: #3949ab;
+            text-decoration: underline;
+        }
+
+        .card-button {
+            background: #1a237e;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-button:hover {
+            background: #3949ab;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .documents-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .documents-section h3 {
+            color: #1a237e;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .document-item:hover {
+            background: #f0f0f0;
+            border-color: #1a237e;
+            transform: translateX(5px);
+        }
+
+        .doc-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0d1b2a;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.8;
+            margin: 0.5rem 0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .social-icon {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .three-column-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .action-btn {
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-main-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .action-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-text-section h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <script>
+        function navigateTo(path) {
+            const routes = {
+                '/login': 'login.html',
+                '/stu-signup': 'Stu-Profile/stu-signup.html',
+                '/Admin-signup': 'Admin/Admin-signup.html',
+                '/place-signup': 'Placement officer/place-signup.html',
+                '/Deprt-sigup': 'Department coordinator/Deprt-sigup.html',
+                '/department-signup': 'login.html'  // Temporary route for Recruiter, redirects to login
+            };
+
+            if (routes[path]) {
+                window.location.href = routes[path];
+            } else {
+                alert('Navigation to ' + path + ' - Page not found');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="home-container">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <img 
+                            src="https://img.jagranjosh.com/images/2022/June/862022/MSAJCE2.png" 
+                            alt="MSAJCE Logo" 
+                            class="msajce-logo-header"
+                        />
+                    </div>
+                    <div class="logo-text-section">
+                        <h1>MSAJCE LMS</h1>
+                        <h3>Training & Placement Portal</h3>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <button onclick="navigateTo('/login')" class="nav-item">Login</button>
+                    <a href="#placement-features" class="nav-item">Placement Portal</a>
+                    <a href="#content-section" class="nav-item">Facilities</a>
+                    <a href="#footer" class="nav-item">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h2 class="hero-title">One Platform. One Institution. Endless Learning.</h2>
+                    <p class="hero-description">
+                        Welcome to the official Learning Management System of MSAJCE.
+                        This platform is designed to seamlessly connect students, faculty, and administrators under one digital roof. MSAJCE LMS empowers learners with structured academic content, skill development resources, assessments, and placement-oriented training. <br/> <br />
+
+                        Our students are shaped through a blend of strong fundamentals, practical learning, and continuous evaluation. With guided mentorship, real-time progress tracking, and industry-aligned preparation, this LMS supports every student in achieving academic excellence and career readiness. <br /> <br />
+
+                        Let the learning journey begin....
+                    </p>
+                </div>
+                <div class="hero-right">
+                    <div class="action-buttons">
+                        <button class="action-btn" onclick="navigateTo('/stu-signup')">
+                            <span class="btn-icon">👤</span>
+                            <span class="btn-text">Student</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('/Admin-signup')">
+                            <span class="btn-icon">💼</span>
+                            <span class="btn-text">Admin</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('/place-signup')">
+                            <span class="btn-icon">📈</span>
+                            <span class="btn-text">Placement Officer</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('/Deprt-sigup')">
+                            <span class="btn-icon">🏫</span>
+                            <span class="btn-text">Department Coordinator</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('/department-signup')">
+                            <span class="btn-icon">🔍</span>
+                            <span class="btn-text">Recruiter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placement Portal Features Section -->
+        <section id="placement-features" class="content-section">
+            <div class="container">
+                <h2 class="section-main-title" style="color: #1a237e; text-align: center; margin-bottom: 3rem;">Placement Portal Features</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="info-card">
+                        <h3>Profile Management</h3>
+                        <p>Complete student profile with academic records, skills mapping, resume builder, and project details.</p>
+                        <a href="Stu-Profile/Stu-Profile.html" class="card-link">View Profile →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Placement Readiness Tracker</h3>
+                        <p>Track eligibility, skill gaps, mock test performance, and placement status.</p>
+                        <a href="Stu-Profile/Stu-Dashboard.html" class="card-link">View Dashboard →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Online Assessments</h3>
+                        <p>Take MCQ, coding, and descriptive tests with auto-evaluation and performance analytics.</p>
+                        <a href="Assessment.html" class="card-link">Start Assessment →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Company Profiles</h3>
+                        <p>Explore company details, selection processes, and previous placement history.</p>
+                        <a href="Company-Profile.html" class="card-link">Browse Companies →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Analytics & Reports</h3>
+                        <p>Year-wise placement statistics, package analysis, and NAAC/NBA ready reports.</p>
+                        <a href="Analytics.html" class="card-link">View Analytics →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Internship Search</h3>
+                        <p>Find and apply to internships with advanced filters and application tracking.</p>
+                        <a href="Application-Job,Intership/IntershipSearch1.html" class="card-link">Search Internships →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why MSAJCE Section -->
+        <section id="why-recruit" class="why-section">
+            <div class="container">
+                <h2 class="section-main-title">Why MSAJCE</h2>
+                <p class="section-description">
+                    Established as an institute of national importance, MSAJCE is recognized as a leader 
+                    in the field of research and education in engineering and sciences. Our mission is to 
+                    create an ambience in which new ideas and creativity flourish. The motto of MSAJCE is 
+                    to provide learning blended with excellence, to create leaders of tomorrow. The dynamic 
+                    and constantly evolving academic program reflects the institute's commitment to stay in 
+                    tune with the expanding frontiers of knowledge worldwide. Extracurricular activities 
+                    are also treated with equal importance towards overall development making the students 
+                    at MSAJCE fit to take on the challenges faced in the competitive corporate world. 
+                    Backed by the support of Alumni in different sectors and guidance of esteemed professors, 
+                    we strive to offer highly nurturing environment to all its students.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-block">
+                        <div class="feature-icon">👥</div>
+                        <h3>Alumni</h3>
+                        <p>Our Alumni have emerged successful and excelled in varied professions across the globe. 
+                           This network is highly enriching for the growth of our community.</p>
+                        <button class="know-more-btn">Know more</button>
+                    </div>
+                    <div class="feature-block">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Rankings</h3>
+                        <p>Recognized as one of the top engineering colleges, we strive for excellence. 
+                           Our rankings are reflective of our steep progress.</p>
+                        <button class="know-more-btn">Know more</button>
+                    </div>
+                    <div class="feature-block">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Admission Process</h3>
+                        <p>All the students enrolled at MSAJCE are selected after rigorous screening process. 
+                           It ensures that we nurture some of the most brilliant minds.</p>
+                        <button class="know-more-btn">Know more</button>
+                    </div>
+                    <div class="feature-block">
+                        <div class="feature-icon">🌱</div>
+                        <h3>All Round Development</h3>
+                        <p>One's skills, aptitude and perception reflect the personality of an individual. 
+                           We offer numerous opportunities for multi dimensional growth of an individual.</p>
+                        <button class="know-more-btn">Know more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section - Three Columns -->
+        <section id="content-section" class="content-section">
+            <div class="container">
+                <div class="three-column-layout">
+                    <!-- Left Column -->
+                    <div class="content-column">
+                        <div class="info-card">
+                            <h3>Academic Facilities</h3>
+                            <p>
+                                Academics at MSAJCE has the flexibility to evolve with ever changing requirements. 
+                                Various activities are carried out to promote research, enhance creativity, learn 
+                                new skills, implement innovative solutions and provide students with industry-relevant 
+                                knowledge and practical experience.
+                            </p>
+                            <a href="#" class="card-link">See more</a>
+                        </div>
+                        <div class="info-card">
+                            <h3>Technology Centre</h3>
+                            <p>
+                                Our Technology Centre provides state-of-the-art facilities for research and innovation. 
+                                Students have access to modern laboratories, cutting-edge equipment, and collaborative 
+                                spaces to work on projects and research initiatives.
+                            </p>
+                            <a href="https://www.msajce-edu.in/technologycentre.php" class="card-link">Explore Technology Centre</a>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column -->
+                    <div class="content-column">
+                        <div class="info-card">
+                            <h3>Departments & Programs at MSAJCE</h3>
+                            <p>
+                                MSAJCE is known as a premier engineering, science and technology institute. Currently, 
+                                it offers an opportunity to learn in varied departments and pursue multiple programs. 
+                                This university has strived and evolved over years to offer the students finest of its 
+                                facilities for multi-dimensional growth. It is a home for design, management school and 
+                                several emerging centres in technical, non-technical & entrepreneurial sector.
+                            </p>
+                            <button class="card-button">Know more</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="content-column">
+                        <div class="documents-section">
+                            <h3>Placement Documents</h3>
+                            <div class="document-list">
+                                <a href="#" class="document-item">
+                                    <span class="doc-icon">📄</span>
+                                    <span>Upcoming Placement Brochure 2026-27</span>
+                                </a>
+                                <a href="#" class="document-item">
+                                    <span class="doc-icon">📄</span>
+                                    <span>UpComing Interviews</span>
+                                </a>
+                                <a href="#" class="document-item">
+                                    <span class="doc-icon">📄</span>
+                                    <span>Internship Details</span>
+                                </a>
+                                <a href="#" class="document-item">
+                                    <span class="doc-icon">📄</span>
+                                    <span> Student Placed Report 2025</span>
+                                </a>
+                                <a href="#" class="document-item">
+                                    <span class="doc-icon">📄</span>
+                                    <span>Placement Report 2023-25</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 class="stat-number">1000+</h3>
+                        <p class="stat-label">Learning Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">500+</h3>
+                        <p class="stat-label">Placed Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">200+</h3>
+                        <p class="stat-label">Got Internship</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">50+</h3>
+                        <p class="stat-label">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Contact Information</h4>
+                        <p>34, Rajiv Gandhi Salai (OMR),<br />
+                           Siruseri IT Park, Siruseri,<br />
+                           Chennai - 603103</p>
+                        <p>Phone: +91 99400 04500</p>
+                        <p>Email: placement@msajce-edu.in</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>MSAJCE Links</h4>
+                        <ul>
+                            <li><a href="#">News Letter</a></li>
+                            <li><a href="#">Anna University Approval</a></li>
+                            <li><a href="#">AICTE Approval</a></li>
+                            <li><a href="#">Code of Conduct</a></li>
+                            <li><a href="#">Best Practices</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Academic Calendar</a></li>
+                            <li><a href="#">College Management System</a></li>
+                            <li><a href="#">Grievance Cell</a></li>
+                            <li><a href="#">Mandatory Disclosure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 MSAJCE Placement Cell. All Rights Reserved.</p>
+                    <p>Maintained by: WebTeam MSAJCE</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

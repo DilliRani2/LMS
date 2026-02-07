@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Internship Search</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Material+Icons+Outlined&amp;display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a56db", // Corporate Blue
+              "background-light": "#f9fafb",
+              "background-dark": "#111827",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .material-icons-outlined {
+        vertical-align: middle;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200">
+    <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full lg:hidden">
+            <span class="material-icons-outlined">menu</span>
+          </button>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white font-bold">M</div>
+            <span class="font-bold text-xl tracking-tight text-slate-800 dark:text-white uppercase">MSAJCE LMS</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 font-semibold text-sm">
+            <span class="material-icons-outlined !text-lg">local_fire_department</span>
+            <span>12</span>
+          </button>
+          <button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+            <span class="material-icons-outlined">notifications</span>
+            <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+          </button>
+          <button class="flex items-center gap-2 p-1 pl-1 pr-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700">
+            <img alt="User avatar" class="w-8 h-8 rounded-full object-cover border border-slate-200 dark:border-slate-600" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx0g3tGh4QMAwFjYRz0DP1c-CRkQ3gs-E7h-bJQYOYbIf4FBQrI9Li_fZGrcbmPQAPidNHyZ101aXnUdKqdcv25dQvXEjHtEcDbKmwlGK90Pjt9bdPTPQboA3PFVUD8Y4K5MpsRbCPkRt5B2RQ8Ksz7k-EhbZX50-RJJ4j3bw3PnpR4KGxSWDOlFU8pYkqzNxv0iLbidAoCpXVXwz4t5RJJ0og7VYXAy47H98j6v1GXpqRsU7v1AXm-XakgzGkq5HolqcF2yfhtcc" />
+            <span class="material-icons-outlined text-slate-400">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <div class="flex items-center gap-3 overflow-x-auto pb-4 no-scrollbar">
+        <button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full shadow-sm hover:border-primary transition-colors whitespace-nowrap">
+          <span class="material-icons-outlined text-primary">filter_list</span>
+          <span class="font-medium text-sm">Filters</span>
+        </button>
+        <div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+        <button class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium shadow-sm whitespace-nowrap">
+          As per my preference
+        </button>
+        <button class="flex items-center gap-1 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 whitespace-nowrap">
+          Profile
+          <span class="material-icons-outlined !text-sm">keyboard_arrow_down</span>
+        </button>
+        <button class="flex items-center gap-1 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 whitespace-nowrap">
+          Location
+          <span class="material-icons-outlined !text-sm">keyboard_arrow_down</span>
+        </button>
+        <button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 whitespace-nowrap">
+          All filters
+        </button>
+      </div>
+      <div class="mt-6 mb-8">
+        <h1 class="text-2xl font-bold text-slate-800 dark:text-white">4959 total internships</h1>
+        <p class="text-slate-500 dark:text-slate-400 mt-1">Latest summer internships available for you</p>
+      </div>
+      <div class="space-y-4">
+        <div class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-l-primary">
+          <div class="flex justify-between items-start">
+            <div class="space-y-1">
+              <h2 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">Content Writing</h2>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">Brightrays</p>
+            </div>
+            <div class="w-12 h-12 bg-slate-50 dark:bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
+              <img alt="Company Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMcBrOnwJnRqCk8DcFjp141ByjknVE34XNnLAb55FVyDfF3n0H6dkThMLBvNMP29--16-N2ybXFUrTL_eclk0pSD1GVgNUiKJSpMO8AfCK5tUTTB7cdXh9A7m21XoZLI-zvWej_SKOwwpcVFgf20a6QCqHqeJZ2ucWd_mR4Vw5vU7OAMiLn-o_DBYTvlmgXcUCYE-ifCcXQpE9nPUsT5d_0hUlU89tcyia9KO_9HlGXm3mvdvedB0gpTre2XOW7bKo2G1WDxq8tkw" />
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">location_on</span>
+              <span>Noida</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">payments</span>
+              <span class="font-medium text-slate-800 dark:text-slate-200">₹ 12,000 /month</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">calendar_today</span>
+              <span>3 Months</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-50 dark:bg-slate-900 px-2 py-1 rounded">
+              <span class="material-icons-outlined !text-sm">schedule</span>
+              <span>4 days ago</span>
+            </div>
+            <button class="text-primary font-semibold text-sm flex items-center gap-1">
+              View Details
+              <span class="material-icons-outlined !text-sm">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer">
+          <div class="flex justify-between items-start">
+            <div class="space-y-1">
+              <h2 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">Frontend Developer</h2>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">TechFlow Systems</p>
+            </div>
+            <div class="w-12 h-12 bg-slate-50 dark:bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
+              <img alt="Company Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBz8l6EGrfuBYRj66nYROT4lRVIld4Qel1I2czJANV2AeXvwtLfy8I94hLHzHorasBUPjgm1htomPZkENoBnqvoD0X-h_jaFDyNbRdqQPPz_QDfYLfUCFS7hdHHSvv-Yy_JiM12_VlWmiRuE7U62AbEHbUK8Gme8r-5pXNwlSe9wbS_QNexshSerWBLPzkJlGPFYaqFKGQmlA0ngL7V4Mk2SyFJPl4GAWVgxP06Z8THUGspEIcdYLOwDSqSFtPt1U6Lc-SD-BJk1s" />
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">home_work</span>
+              <span>Remote</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">payments</span>
+              <span class="font-medium text-slate-800 dark:text-slate-200">₹ 25,000 /month</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">calendar_today</span>
+              <span>6 Months</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-50 dark:bg-slate-900 px-2 py-1 rounded">
+              <span class="material-icons-outlined !text-sm">schedule</span>
+              <span>2 days ago</span>
+            </div>
+            <button class="text-primary font-semibold text-sm flex items-center gap-1">
+              View Details
+              <span class="material-icons-outlined !text-sm">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer">
+          <div class="flex justify-between items-start">
+            <div class="space-y-1">
+              <h2 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">Digital Marketing</h2>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">GrowthX Labs</p>
+            </div>
+            <div class="w-12 h-12 bg-slate-50 dark:bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
+              <img alt="Company Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtmbY-UH6AjU54AWnT3OqoaLXjDhKxHNcwPAHIulfAvTnztHbucVrFtrNv1kW1s_LAQHqfVTJ8Nt74_9w4saOp-cQN2XdgoCG9-2No9NDDJAc981WOfVAAcbtNehRgzE7Em3Rlu0gRcXyivD0AcEGocuxR1KMWWL6KHkPI3oJzfneWzdwNngVJQzrFVUVBoIFEEtPTWLXxTHRhEpxcE9SQLVN03xwz3hzFXJKdTzl_FQFkSeQrq_1ATdkaDkqa7BWBgfk9PQGdxKA" />
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">location_on</span>
+              <span>Bangalore</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">payments</span>
+              <span class="font-medium text-slate-800 dark:text-slate-200">₹ 8,000 /month</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">calendar_today</span>
+              <span>2 Months</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-50 dark:bg-slate-900 px-2 py-1 rounded">
+              <span class="material-icons-outlined !text-sm">schedule</span>
+              <span>Just now</span>
+            </div>
+            <button class="text-primary font-semibold text-sm flex items-center gap-1">
+              View Details
+              <span class="material-icons-outlined !text-sm">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer">
+          <div class="flex justify-between items-start">
+            <div class="space-y-1">
+              <h2 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">UI/UX Design</h2>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">Creative Studio</p>
+            </div>
+            <div class="w-12 h-12 bg-slate-50 dark:bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
+              <img alt="Company Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MmlxDe4JSfSuP0HIEaRESPrInHfVveIgZ3RffCh7UIhnCD-4zeDqUh88PEfW_lgAJDqQWhLpt3n7aBl7wkuprmiFpKJQF9Lx0nGKQ7coCAmavzoSMmzshC4SpjDbuqX-FEHSHq0mALnLERqriiweE0Vc6GVZjtIkoEGUnLDt8vlLEdgUuKHkAVTDXpKFB2wtInw2fCWOQxdBfjzCZ5AWJxu88tk124aXPzH4NGWpT7dfP-ELabsXhsQzOqTK9fuVn4coC7G-c_8" />
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">location_on</span>
+              <span>Gurgaon</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">payments</span>
+              <span class="font-medium text-slate-800 dark:text-slate-200">₹ 15,000 /month</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-icons-outlined !text-base">calendar_today</span>
+              <span>3 Months</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 bg-slate-50 dark:bg-slate-900 px-2 py-1 rounded">
+              <span class="material-icons-outlined !text-sm">schedule</span>
+              <span>1 week ago</span>
+            </div>
+            <button class="text-primary font-semibold text-sm flex items-center gap-1">
+              View Details
+              <span class="material-icons-outlined !text-sm">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <button class="inline-flex items-center gap-2 px-6 py-3 text-primary font-bold hover:bg-primary/5 rounded-full transition-colors">
+          See more internships
+          <span class="material-icons-outlined">arrow_downward</span>
+        </button>
+      </div>
+    </main>
+    <footer class="mt-12 py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-400 text-sm">
+      <p>© 2024 MSASCE Learning Management System. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

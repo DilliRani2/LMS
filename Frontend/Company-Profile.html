@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profiles - MSAJCE LMS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0E21A0",
+                        secondary: "#4D2FB2",
+                        accent: "#B153D7"
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-icons">business</span>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">MSAJCE LMS</h1>
+                        <p class="text-sm text-gray-500">Company Profiles</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search companies..." class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <span class="material-icons absolute left-3 top-2.5 text-gray-400 text-sm">search</span>
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                        Add Company
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Filters -->
+        <div class="bg-white rounded-lg shadow-sm border p-6 mb-8">
+            <div class="flex flex-wrap gap-4">
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option>All Industries</option>
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Consulting</option>
+                    <option>Manufacturing</option>
+                </select>
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option>All Locations</option>
+                    <option>Bangalore</option>
+                    <option>Chennai</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                </select>
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option>Package Range</option>
+                    <option>₹3-6 LPA</option>
+                    <option>₹6-10 LPA</option>
+                    <option>₹10-15 LPA</option>
+                    <option>₹15+ LPA</option>
+                </select>
+                <button class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Company Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Company Card 1 -->
+            <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="material-icons text-blue-600">code</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">TechCorp Solutions</h3>
+                                <p class="text-sm text-gray-600">Software Development</p>
+                            </div>
+                        </div>
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
+                    </div>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="material-icons text-sm mr-2">location_on</span>
+                            Bangalore, Karnataka
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="material-icons text-sm mr-2">people</span>
+                            500-1000 employees
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="material-icons text-sm mr-2">attach_money</span>
+                            ₹8-12 LPA average package
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-900 mb-2">Recent Placements</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">2024: 45 students</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">2023: 38 students</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button class="flex-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors">
+                            View Details
+                        </button>
+                        <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
