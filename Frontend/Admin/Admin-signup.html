@@ -1,539 +1,324 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Signup - MSAJCE Training & Placement Portal</title>
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Signup - MSAJCE Training & Placement Portal</title>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    /* Signup Page - Two Column Layout */
-    .signup-page-container {
-      min-height: 100vh;
-      background: #f5f5f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+background:#f5f5f5;
+}
 
-    .signup-main-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1200px;
-      width: 100%;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      min-height: 700px;
-    }
+/* Page Layout */
+.signup-page-container{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:2rem;
+}
 
-    /* Left Column - Branding */
-    .signup-left-column {
-      background: linear-gradient(135deg, #0E21A0 0%, #4D2FB2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      color: white;
-    }
+.signup-main-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+max-width:1200px;
+width:100%;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
+overflow:hidden;
+}
 
-    .branding-content {
-      text-align: center;
-    }
+/* Left Branding */
+.signup-left-column{
+background:linear-gradient(135deg,#0E21A0,#4D2FB2);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:3rem;
+color:white;
+}
 
-    .brand-logo {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      border-radius: 50%;
-      padding: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
+.branding-content{
+text-align:center;
+}
 
-    .msajce-logo {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-    }
+.brand-logo{
+width:150px;
+height:150px;
+background:white;
+border-radius:50%;
+padding:15px;
+margin:auto;
+margin-bottom:1.5rem;
+}
 
-    .brand-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: 2px;
-    }
+.msajce-logo{
+width:100%;
+height:100%;
+object-fit:contain;
+}
 
-    .brand-role {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-    }
+.brand-name{
+font-size:2.5rem;
+font-weight:700;
+}
 
-    .brand-tagline {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      font-weight: 300;
-    }
+.brand-role{
+font-size:1.5rem;
+margin-top:.3rem;
+}
 
-    /* Right Column - Signup Form */
-    .signup-right-column {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      background: white;
-    }
+.brand-tagline{
+margin-top:.3rem;
+opacity:.8;
+}
 
-    .signup-form-container {
-      width: 100%;
-      max-width: 400px;
-    }
+/* Right Form */
+.signup-right-column{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:3rem;
+}
 
-    .signup-form-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0E21A0;
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
+.signup-form-container{
+width:100%;
+max-width:400px;
+}
 
-    .back-link {
-      display: inline-block;
-      color: #0E21A0;
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-      transition: color 0.3s ease;
-    }
+.signup-form-title{
+font-size:2rem;
+color:#0E21A0;
+margin-bottom:1rem;
+}
 
-    .back-link:hover {
-      color: #B153D7;
-      text-decoration: underline;
-    }
+.back-link{
+color:#0E21A0;
+text-decoration:none;
+font-size:.9rem;
+}
 
-    .signup-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
+.signup-form{
+display:flex;
+flex-direction:column;
+gap:1.2rem;
+margin-top:1rem;
+}
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+.form-group{
+display:flex;
+flex-direction:column;
+}
 
-    .form-label {
-      font-weight: 600;
-      color: #333;
-      font-size: 0.95rem;
-    }
+.form-label{
+font-weight:600;
+margin-bottom:4px;
+}
 
-    .form-input {
-      width: 100%;
-      padding: 0.875rem;
-      border: 2px solid #e0e0e0;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-      background: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+.form-input{
+padding:.8rem;
+border:2px solid #ddd;
+border-radius:6px;
+background:#f8f9fa;
+}
 
-    .form-input:focus {
-      outline: none;
-      border-color: #0E21A0;
-      background: white;
-    }
+.form-input:focus{
+outline:none;
+border-color:#0E21A0;
+background:white;
+}
 
-    .form-input.error {
-      border-color: #e74c3c;
-    }
+.error-message{
+font-size:.8rem;
+color:red;
+display:none;
+}
 
-    .error-message {
-      color: #e74c3c;
-      font-size: 0.875rem;
-      margin-top: -0.25rem;
-    }
+.signup-submit-btn{
+padding:1rem;
+background:linear-gradient(135deg,#0E21A0,#4D2FB2);
+border:none;
+color:white;
+border-radius:8px;
+font-weight:700;
+cursor:pointer;
+margin-top:5px;
+}
 
-    .signup-error-message {
-      background: #fee;
-      color: #c33;
-      padding: 0.75rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-      border-left: 3px solid #c33;
-    }
+.signup-submit-btn:hover{
+background:linear-gradient(135deg,#4D2FB2,#B153D7);
+}
 
-    .signup-submit-btn {
-      width: 100%;
-      padding: 1rem;
-      background: linear-gradient(135deg, #0E21A0, #4D2FB2);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0.5rem;
-    }
+.login-link{
+text-align:center;
+margin-top:10px;
+}
 
-    .signup-submit-btn:hover {
-      background: linear-gradient(135deg, #4D2FB2, #B153D7);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(77, 47, 178, 0.3);
-    }
+.login-link-text{
+text-decoration:none;
+color:#0E21A0;
+font-size:.9rem;
+}
 
-    .signup-submit-btn:active {
-      transform: translateY(0);
-    }
+.signup-error-message{
+background:#ffe6e6;
+color:#c33;
+padding:.7rem;
+border-radius:6px;
+font-size:.9rem;
+margin-bottom:8px;
+}
 
-    .login-link {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .login-link-text {
-      color: #0E21A0;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .login-link-text:hover {
-      color: #B153D7;
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 968px) {
-      .signup-main-container {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .signup-left-column {
-        padding: 2rem;
-        min-height: 300px;
-      }
-
-      .brand-logo {
-        width: 120px;
-        height: 120px;
-      }
-
-      .brand-name {
-        font-size: 2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .signup-page-container {
-        padding: 1rem;
-      }
-
-      .signup-left-column,
-      .signup-right-column {
-        padding: 2rem 1.5rem;
-      }
-
-      .signup-form-title {
-        font-size: 1.5rem;
-      }
-
-      .brand-logo {
-        width: 100px;
-        height: 100px;
-      }
-
-      .brand-name {
-        font-size: 1.75rem;
-      }
-    }
-  </style>
+/* Responsive */
+@media(max-width:900px){
+.signup-main-container{
+grid-template-columns:1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="signup-page-container">
-    <div class="signup-main-container">
-      <!-- Left Column - Branding -->
-      <div class="signup-left-column">
-        <div class="branding-content">
-          <div class="brand-logo">
-            <img
-              src="https://img.jagranjosh.com/images/2022/June/862022/MSAJCE2.png"
-              alt="MSAJCE Logo"
-              class="msajce-logo"
-            />
-          </div>
-          <h1 class="brand-name">MSAJCE</h1>
-          <p class="brand-role">Admin Portal</p>
-          <p class="brand-tagline">Training & Placement Portal</p>
-        </div>
-      </div>
 
-      <!-- Right Column - Signup Form -->
-      <div class="signup-right-column">
-        <div class="signup-form-container">
-          <a href="../home.html" class="back-link">← Back to Home</a>
-          <h2 class="signup-form-title">ADMIN SIGNUP</h2>
+<div class="signup-page-container">
+<div class="signup-main-container">
 
-          <form id="signupForm" class="signup-form">
-            <div class="form-group">
-              <label for="username" class="form-label">Username</label>
-              <input
-                id="username"
-                name="username"
-                value=""
-                type="text"
-                class="form-input"
-                placeholder="Enter your username"
-              />
-              <p class="error-message" id="usernameError" style="display: none;"></p>
-            </div>
+<!-- Left Branding -->
+<div class="signup-left-column">
 
-            <div class="form-group">
-              <label for="email" class="form-label">Email ID (College Email)</label>
-              <input
-                id="email"
-                name="email"
-                value=""
-                type="email"
-                class="form-input"
-                placeholder="Enter your college email"
-              />
-              <p class="error-message" id="emailError" style="display: none;"></p>
-            </div>
+<div class="branding-content">
 
-            <div class="form-group">
-              <label for="password" class="form-label">Password</label>
-              <input
-                id="password"
-                name="password"
-                value=""
-                type="password"
-                class="form-input"
-                placeholder="Enter your password"
-              />
-              <p class="error-message" id="passwordError" style="display: none;"></p>
-            </div>
+<div class="brand-logo">
+<img src="https://img.jagranjosh.com/images/2022/June/862022/MSAJCE2.png"
+class="msajce-logo">
+</div>
 
-            <div class="form-group">
-              <label for="confirmPassword" class="form-label">Confirm Password</label>
-              <input
-                id="confirmPassword"
-                name="confirmPassword"
-                value=""
-                type="password"
-                class="form-input"
-                placeholder="Confirm your password"
-              />
-              <p class="error-message" id="confirmPasswordError" style="display: none;"></p>
-            </div>
+<h1 class="brand-name">MSAJCE</h1>
+<p class="brand-role">Admin Portal</p>
+<p class="brand-tagline">Training & Placement Portal</p>
 
-            <div id="signupErrorContainer"></div>
+</div>
+</div>
 
-            <button type="submit" class="signup-submit-btn">SIGN UP</button>
-          </form>
+<!-- Right Form -->
+<div class="signup-right-column">
 
-          <div class="login-link">
-            <a href="admin-login.html" class="login-link-text">Already have an account? Login here</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="signup-form-container">
 
-  <script>
-    // Form State
-    let formData = {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    };
+<a href="../home.html" class="back-link">← Back to Home</a>
 
-    let errors = {};
+<h2 class="signup-form-title">ADMIN SIGNUP</h2>
 
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      setupEventListeners();
-    });
+<form id="signupForm" class="signup-form">
 
-    // Setup event listeners
-    function setupEventListeners() {
-      const form = document.getElementById('signupForm');
-      const inputs = ['username', 'email', 'password', 'confirmPassword'];
+<div class="form-group">
+<label class="form-label">Username</label>
+<input id="username" type="text" class="form-input" placeholder="Enter username">
+<p id="usernameError" class="error-message"></p>
+</div>
 
-      inputs.forEach(inputName => {
-        const inputElement = document.getElementById(inputName);
-        inputElement.addEventListener('change', handleChange);
-      });
+<div class="form-group">
+<label class="form-label">College Email</label>
+<input id="email" type="email" class="form-input" placeholder="Enter college email">
+<p id="emailError" class="error-message"></p>
+</div>
 
-      form.addEventListener('submit', handleSubmit);
-    }
+<div class="form-group">
+<label class="form-label">Password</label>
+<input id="password" type="password" class="form-input" placeholder="Enter password">
+<p id="passwordError" class="error-message"></p>
+</div>
 
-    // Handle input change
-    function handleChange(e) {
-      const { name, value } = e.target;
-      formData[name] = value;
+<div class="form-group">
+<label class="form-label">Confirm Password</label>
+<input id="confirmPassword" type="password" class="form-input" placeholder="Confirm password">
+<p id="confirmPasswordError" class="error-message"></p>
+</div>
 
-      if (errors[name]) {
-        clearFieldError(name);
-      }
-    }
+<div id="signupErrorContainer"></div>
 
-    // Validate form
-    function validate() {
-      const newErrors = {};
+<button type="submit" class="signup-submit-btn">SIGN UP</button>
 
-      if (!formData.username) {
-        newErrors.username = 'Username is required';
-      } else if (formData.username.length < 2) {
-        newErrors.username = 'Username must be at least 2 characters';
-      }
+</form>
 
-      if (!formData.email) {
-        newErrors.email = 'Email is required';
-      } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        newErrors.email = 'Email is invalid';
-      } else if (!formData.email.endsWith('@msajce.edu.in')) {
-        newErrors.email = 'Please use your college email (@msajce.edu.in)';
-      }
+<div class="login-link">
+<a href="admin-login.html" class="login-link-text">
+Already have an account? Login here
+</a>
+</div>
 
-      if (!formData.password) {
-        newErrors.password = 'Password is required';
-      } else if (formData.password.length < 6) {
-        newErrors.password = 'Password must be at least 6 characters';
-      }
+</div>
+</div>
 
-      if (!formData.confirmPassword) {
-        newErrors.confirmPassword = 'Please confirm your password';
-      } else if (formData.password !== formData.confirmPassword) {
-        newErrors.confirmPassword = 'Passwords do not match';
-      }
+</div>
+</div>
 
-      return newErrors;
-    }
+<script>
 
-    // Handle form submission
-    async function handleSubmit(e) {
-      e.preventDefault();
-      clearSignupError();
+document.getElementById("signupForm").addEventListener("submit",function(e){
 
-      const newErrors = validate();
+e.preventDefault()
 
-      if (Object.keys(newErrors).length > 0) {
-        errors = newErrors;
-        displayErrors();
-        return;
-      }
+let username=document.getElementById("username").value
+let email=document.getElementById("email").value
+let password=document.getElementById("password").value
+let confirmPassword=document.getElementById("confirmPassword").value
 
-      try {
-        const response = await fetch('http://localhost:8000/api/signup/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: formData.email,
-            password: formData.password,
-            username: formData.username,
-            role: 'admin'
-          }),
-        });
+let error=false
 
-        const data = await response.json();
+function showError(id,msg){
+let el=document.getElementById(id)
+el.innerText=msg
+el.style.display="block"
+error=true
+}
 
-        if (response.ok) {
-          console.log("Admin signup successful:", data);
+if(username.length<2){
+showError("usernameError","Username must be at least 2 characters")
+}
 
-          // Store user data in localStorage
-          const userData = {
-            email: data.user.email,
-            username: data.user.username,
-            role: data.user.role,
-            id: data.user.id
-          };
-          localStorage.setItem('currentUser', JSON.stringify(userData));
+if(!email.endsWith("@msajce.edu.in")){
+showError("emailError","Use college email (@msajce.edu.in)")
+}
 
-          // Redirect to Admin dashboard
-          window.location.href = 'Admin-Dashboard.html';
-        } else {
-          showSignupError(data.message || 'Signup failed');
-        }
-      } catch (error) {
-        console.error('Signup error:', error);
-        showSignupError('Network error. Please try again.');
-      }
-    }
+if(password.length<6){
+showError("passwordError","Password must be at least 6 characters")
+}
 
-    // Display errors
-    function displayErrors() {
-      Object.keys(errors).forEach(fieldName => {
-        showFieldError(fieldName, errors[fieldName]);
-      });
-    }
+if(password!==confirmPassword){
+showError("confirmPasswordError","Passwords do not match")
+}
 
-    // Show field error
-    function showFieldError(fieldName, message) {
-      const errorElement = document.getElementById(fieldName + 'Error');
-      const inputElement = document.getElementById(fieldName);
+if(error) return
 
-      errorElement.textContent = message;
-      errorElement.style.display = 'block';
-      inputElement.classList.add('error');
-    }
+let adminUser={
+username:username,
+email:email,
+password:password,
+role:"admin"
+}
 
-    // Clear field error
-    function clearFieldError(fieldName) {
-      const errorElement = document.getElementById(fieldName + 'Error');
-      const inputElement = document.getElementById(fieldName);
+localStorage.setItem("adminUser",JSON.stringify(adminUser))
+localStorage.setItem("currentUser",JSON.stringify(adminUser))
 
-      errorElement.style.display = 'none';
-      inputElement.classList.remove('error');
-      delete errors[fieldName];
-    }
+alert("Admin Signup Successful 🎉")
 
-    // Clear all errors
-    function clearErrors() {
-      ['username', 'email', 'password', 'confirmPassword'].forEach(fieldName => {
-        clearFieldError(fieldName);
-      });
-    }
+window.location.href="Admin-Dashboard.html"
 
-    // Show signup error
-    function showSignupError(message) {
-      const container = document.getElementById('signupErrorContainer');
-      container.innerHTML = `<div class="signup-error-message">${message}</div>`;
-    }
+})
 
-    // Clear signup error
-    function clearSignupError() {
-      document.getElementById('signupErrorContainer').innerHTML = '';
-    }
-  </script>
+</script>
+
 </body>
 </html>
+```
